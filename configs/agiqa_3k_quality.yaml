@@ -1,0 +1,35 @@
+experiment_name: "AGIQA3k_Quality_Task"
+device: "cuda:0"
+seed: 20260221
+
+dataset_name: "AGIQA3k"
+task_type: "quality"
+
+img_dir: "./dataset/AGIQA3k/image"
+train_csv: "./dataset/AGIQA3k/quality/train.csv"
+val_csv: "./dataset/AGIQA3k/quality/val.csv"
+
+reiqa_root: "./ReIQA_main"
+cache_root: "./cache_reiqa_feats"
+
+clip_model_name: "ViT-B/32"
+freeze_opt: 0
+
+batch_size: 16
+num_workers: 16
+train_num_patch: 8
+val_num_patch: 15
+
+clip_lr: 0.000005
+tcpga_lr: 0.00005
+prior_gate_lr: 0.00001
+full_mod_lr: 0.00005
+
+clip_weight_decay: 0.001
+others_weight_decay: 0.0
+
+epochs: 45
+scheduler_mode: "cosine"
+cosine_t_max: 5
+
+checkpoint_dir: "./checkpoints/AGIQA3k/quality"

@@ -1,0 +1,36 @@
+experiment_name: "PKUI2IQA_Alignment_Task"
+device: "cuda:0"
+seed: 20260221
+
+dataset_name: "PKUI2IQA"
+task_type: "alignment"
+
+img_dir: "./dataset/PKUI2IQA/image"
+train_csv: "./dataset/PKUI2IQA/alignment/train.csv"
+val_csv: "./dataset/PKUI2IQA/alignment/val.csv"
+
+reiqa_root: "./ReIQA_main"
+cache_root: "./cache_reiqa_feats"
+
+clip_model_name: "ViT-B/32"
+freeze_opt: 0
+
+batch_size: 16
+num_workers: 16
+train_num_patch: 8
+val_num_patch: 15
+
+clip_lr: 0.000005
+tcpga_lr: 0.00005
+prior_gate_lr: 0.00001
+full_mod_lr: 0.00005
+
+clip_weight_decay: 0.001
+others_weight_decay: 0.0
+
+epochs: 25
+scheduler_mode: "warmup_cosine"
+warmup_epochs: 3
+cosine_eta_min_factor: 0.2
+
+checkpoint_dir: "./checkpoints/PKUI2IQA/alignment"
