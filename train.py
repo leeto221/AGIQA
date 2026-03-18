@@ -36,13 +36,7 @@ def set_seed(seed=20200626):
 
 
 def freeze_model(model, opt=0):
-    """
-    与项目一保持一致
-    opt=0: 只冻结 logit_scale，其他 CLIP 参数可训练
-    opt=1: 冻结文本塔
-    opt=2: 冻结视觉塔
-    opt=3: 冻结整个 CLIP
-    """
+
     model.clip_model.logit_scale.requires_grad = False
 
     if opt == 0:
@@ -154,11 +148,7 @@ def build_optimizer(cfg, model):
 
 
 def build_scheduler(cfg, optimizer):
-    """
-    对齐原三份脚本的差异：
-    - AGIQA3k: cosine
-    - AIGCIQA2023 / PKUI2IQA: warmup_cosine
-    """
+
     scheduler_mode = getattr(cfg, "scheduler_mode", "cosine")
     clip_lr = getattr(cfg, "clip_lr", 5e-6)
 
@@ -200,7 +190,7 @@ def adjust_learning_rate_with_warmup(optimizer, epoch, warmup_epochs):
 
 
 def train_one_epoch(model, train_loader, feature_manager, optimizer, device, epoch):
-    model.eval()  # 与项目一保持一致
+    model.eval()  
 
     running_loss = 0.0
     freeze_prior = (epoch < 3)
