@@ -4,6 +4,7 @@
 Before running, please create a suitable conda environment.
 - conda env create -f environment.yaml
 - conda activate AIGC
+- Download the compiled [Reiqa](https://pan.baidu.com/s/1VGA-Xxgr3uT6K1EIkFxfEQ?pwd=0221) code files to replace the contents of the ReIQA_main folder.
 
 ### Test
 To test the model, first download the trained weights from [BaiduDisk](https://pan.baidu.com/s/13amXPeCtI-SDndy6ihb-HQ?pwd=0221).  
