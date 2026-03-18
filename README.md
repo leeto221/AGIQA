@@ -8,23 +8,19 @@ Before running, please create a suitable conda environment.
 - conda activate AIGC
 
 ### Test
-To test the model, first download the trained weights from [BaiduDisk](https://pan.baidu.com/s/1q7Je2b3yK8An8-XSOhVdfA?pwd=0221).  
-- run `dual_predict_dir.py`.  
+To test the model, first download the trained weights from [BaiduDisk](https://pan.baidu.com/s/13amXPeCtI-SDndy6ihb-HQ?pwd=0221).  
+- Run `test_alignment.sh`.
+- Run `test_quality.sh`.  
 
 ### Train
 To retrain the model:  
-1. Download the pre-trained weights from [BaiduDisk](https://pan.baidu.com/s/1q7Je2b3yK8An8-XSOhVdfA?pwd=0221).  
-2. Prepare your own dataset and run `train_dual.py`.  
-
-To reproduce the entire training process:  
-1. Collect sufficient real-world images from [SyreaNet](https://github.com/RockWenJJ/SyreaNet), or prepare them yourself.
-2. Run `data.py` for data synthesis.  
-3. Use the synthesized dataset to pretrain the model via `pretrain.py`.
-4. Run `train_dual.py`.  
+1. Download the relevant dataset from [BaiduDisk](https://pan.baidu.com/s/1Q-04YzcXyMefLDxQUKG2Ug?pwd=0221).
+2. Place it in the dataset folder.
+3. Run `train.py`.  
 
 ### Notice
 When running these codes, please replace them with your own file path according to the code prompts.  
 
+
 ### Acknowledgements
-1. Underwater image synthesis coefficients are computed using the method from [hainh/sea-thru](https://github.com/hainh/sea-thru).  
-2. We thank the authors of [DysenNet](https://ieeexplore.ieee.org/abstract/document/10852362) for providing the complete SOTA dataset.
+1. Our content extractor and distortion extractor are based on [Re-IQA](https://github.com/avinabsaha/ReIQA).
