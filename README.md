@@ -1,7 +1,5 @@
 # This is a Python implementation of the paper "DPGF-Net: Dual-Prior Guided Fusion Network for Joint Assessment of Perceptual Quality and Semantic Consistency in AI-Generated Images".
 
-🚀2026 CVPR Accepted
-
 ### Environment
 Before running, please create a suitable conda environment.
 - conda env create -f environment.yaml
