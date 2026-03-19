@@ -22,9 +22,6 @@ except ImportError:
 
 
 class AdaptiveResize(object):
-    """
-    与训练/验证阶段保持一致
-    """
     def __init__(self, size, interpolation=BILINEAR, image_size=None):
         assert isinstance(size, int)
         self.size = size
@@ -32,7 +29,7 @@ class AdaptiveResize(object):
         self.image_size = image_size
 
     def __call__(self, img):
-        h, w = img.size  # 保持和原工程一致的写法
+        h, w = img.size  
         if self.image_size is not None:
             if h < self.image_size or w < self.image_size:
                 return transforms.Resize(self.image_size, self.interpolation)(img)
@@ -58,13 +55,6 @@ def get_preprocess_val():
 
 
 def build_patches_for_test(image_path, preprocess, num_patch=15):
-    """
-    对齐验证集逻辑：
-    - preprocess_val
-    - unfold 切 patch
-    - 均匀采样 num_patch 个 patch
-    - 拼 whole-image resized patch
-    """
     img = Image.open(image_path).convert("RGB")
     I = preprocess(img)          # [3,H,W]
     I = I.unsqueeze(0)           # [1,3,H,W]
@@ -110,9 +100,7 @@ def build_patches_for_test(image_path, preprocess, num_patch=15):
 
 
 def load_reiqa_extractors(reiqa_root, device, task_type):
-    """
-    动态加载 ReIQA 的特征提取器和 map 提取器
-    """
+
     reiqa_abs_path = os.path.abspath(reiqa_root)
     reiqa_parent = os.path.dirname(reiqa_abs_path)
     reiqa_pkg_name = os.path.basename(reiqa_abs_path)
@@ -166,10 +154,7 @@ def postprocess_map(map_np, target_hw, device):
 
 
 def maybe_save_cache(cache_root, dataset_name, task_type, image_path, feat_np, map_np):
-    """
-    你说测试时不在乎命中旧缓存，但新生成后顺手存一下通常更方便。
-    不想存可以把这个调用删掉。
-    """
+
     if cache_root is None:
         return
 
