@@ -9,7 +9,6 @@ import torch.nn.functional as F
 
 class FeatureManager:
     """
-    保留工程化缓存管理，但输出后处理对齐项目一：
     - feat: layer_norm
     - map: resize 到 im_hw + min-max normalize
     - task_type: quality / alignment
