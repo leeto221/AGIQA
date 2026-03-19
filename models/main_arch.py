@@ -123,9 +123,6 @@ class FullMod(nn.Module):
 
 
 class DPGFNet(nn.Module):
-    """
-    工程化封装，但保持项目一核心行为一致。
-    """
     def __init__(self, clip_model_name="ViT-B/32", device="cuda"):
         super().__init__()
         self.device = device
@@ -170,7 +167,6 @@ class DPGFNet(nn.Module):
 
         logits5_patch = torch.einsum('bkd,bkd->bk', F_patch, T_all_norm) * logit_scale
 
-        # 保持与项目一一致：实际只用后 2048 维
         v_half = aux_batch[:, 2048:]
         E_full_mod, alpha = self.full_mod(E_full, v_half)
 
