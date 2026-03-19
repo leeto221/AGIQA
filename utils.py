@@ -38,7 +38,6 @@ def compute_metrics(y_pred, y_true):
 
 
 def loss_m3(y_pred, y, epoch=0):
-    # 与项目一当前实际生效版本保持一致：MAE
     return torch.mean(torch.abs(y_pred - y))
 
 
@@ -50,10 +49,6 @@ def convert_models_to_fp32(model):
 
 
 class AdaptiveResize(object):
-    """
-    与项目一保持一致
-    注意：PIL img.size 返回 (W, H)，原工程里变量名写作 h,w，这里照抄行为不改。
-    """
     def __init__(self, size, interpolation=BILINEAR, image_size=None):
         assert isinstance(size, int)
         self.size = size
