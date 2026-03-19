@@ -159,7 +159,6 @@ class AIGCIQA2023Dataset(Dataset):
         assert patches.size(0) >= self.num_patch, \
             f"patch count {patches.size(0)} < num_patch {self.num_patch}, image={image_path}, size={tuple(I.shape)}"
 
-        # 与项目一一致：
         # quality -> col 2
         # alignment -> col 4
         mos_idx = 2 if self.task_type == 'quality' else 4
@@ -179,7 +178,6 @@ class AIGCIQA2023Dataset(Dataset):
 
         prompt = self.data.iloc[index, 5]
 
-        # 继续保持项目一的缓存命名规则
         image_stem = os.path.splitext(image_name)[0]
         feat_stem = f"{model}{image_stem}"
 
@@ -191,7 +189,7 @@ class AIGCIQA2023Dataset(Dataset):
             'mos': mos,
             'prompt': prompt,
             'prompt_name': prompt_name,
-            'image_name': disk_image_name,   # 磁盘真实文件名
+            'image_name': disk_image_name,   
             'image_path': image_path,
             'feat_stem': feat_stem,
             'sel': sel,
