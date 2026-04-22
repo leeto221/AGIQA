@@ -1,4 +1,4 @@
-# 🔥 DPGF-Net: Dual-Prior Guided Fusion Network for AGIQA
+# 🔥 DPGF-Net
 
 <div align="center">
 
