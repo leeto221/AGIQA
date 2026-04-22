@@ -36,7 +36,7 @@ conda activate AIGC
 
 Download ReIQA dependencies and replace the contents in ReIQA_main/:
 
-👉 https://pan.baidu.com/s/1VGA-Xxgr3uT6K1EIkFxfEQ?pwd=0221
+👉 [Reiqa](https://pan.baidu.com/s/1VGA-Xxgr3uT6K1EIkFxfEQ?pwd=0221)
 
 ---
 
