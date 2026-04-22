@@ -48,7 +48,7 @@ Download ReIQA dependencies and replace the contents in ReIQA_main/:
 
 Download:
 
-👉 https://pan.baidu.com/s/1Q-04YzcXyMefLDxQUKG2Ug?pwd=0221
+👉 [BaiduDisk](https://pan.baidu.com/s/1Q-04YzcXyMefLDxQUKG2Ug?pwd=0221)
 
 ---
 
@@ -56,7 +56,7 @@ Download:
 
 Download pretrained weights:
 
-👉 https://pan.baidu.com/s/13amXPeCtI-SDndy6ihb-HQ?pwd=0221
+👉 [BaiduDisk](https://pan.baidu.com/s/13amXPeCtI-SDndy6ihb-HQ?pwd=0221)
 
 Run:
 
