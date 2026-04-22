@@ -19,7 +19,7 @@ Evaluating AI-generated images requires understanding **two tightly coupled aspe
   <img src="fig/fig1_01.png" width="80%">
 </p>
 
-*🔹 Dual-Prior Learning
+🔹 Dual-Prior Learning
 
 * **Distortion Prior** → captures visual artifacts
 * **Content Prior** → captures semantic structure
