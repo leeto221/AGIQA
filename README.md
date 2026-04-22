@@ -16,7 +16,7 @@ Evaluating AI-generated images requires understanding **two tightly coupled aspe
 * 🧠 *Semantic Alignment* (consistency with the prompt)
 
 <p align="center">
-  <img src="figs/framework.png" width="80%">
+  <img src="fig/fig1_01.png" width="80%">
 </p>
 
 *🔹 Dual-Prior Learning
@@ -34,11 +34,10 @@ conda env create -f environment.yaml
 conda activate AIGC
 ```
 
-Download ReIQA dependencies:
+Download ReIQA dependencies and replace the contents in ReIQA_main/:
 
 👉 https://pan.baidu.com/s/1VGA-Xxgr3uT6K1EIkFxfEQ?pwd=0221
 
-Download the compiled ReIQA files and replace the contents in ReIQA_main/.
 ---
 
 ### 📂 Dataset
